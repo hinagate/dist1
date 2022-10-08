@@ -102,12 +102,93 @@ body {
 
 
 @media (max-width: 767px) {
-  .track {
-    flex: 1 0 calc(80%);
-    scroll-snap-align: start;
-  }
-    .track0 {
-    flex: 1 0 calc(24% + 7px);
-    scroll-snap-align: start;
-  }
+.headers {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+
+.tracks,
+.scroller {
+  display: flex;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller {
+  overflow-x: hidden;
+}
+
+.tracks {
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.scenes::-webkit-scrollbar,
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  flex: 1 0 calc(100% + 2px);
+  scroll-snap-align: start;
+}
+.track0 {
+  flex: 1 0 calc(24% + 2px);
+  scroll-snap-align: start;
+}
+.track + .track {
+  margin-left: -1px;
+}
+
+.heading {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border: solid #fff;
+  border-width: 0 1px;
+  z-index: 1;
+  background: #efefef;
+  font-weight: 700;
+}
+
+.heading1row {
+  width: 1%;
+    white-space: nowrap;
+}
+
+.entry {
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  background: #fff;
+  height: 8em;
+  padding: 1em;
+}
+.entryt1 {
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  background: #fff;
+  height: 14em;
+  padding: 1em;
+}
+.entryt2 {
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  background: #fff;
+  height: 14em;
+  padding: 1em;
+}
+
+.entrys1 {
+  border: 1px solid #ebebeb;
+  border-top: 0;
+  background: #fff;
+  height: 6em;
+  padding: 1em;
+}
 }
