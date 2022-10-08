@@ -1,13 +1,13 @@
 <style type="text/css">
-  body {
+ body {
   background: #F5F7FA;
   overflow-x: hidden;
 }
 
 .wrap {
   position: relative;
-  margin: 10em auto 30em;
-  max-width: 960px;
+  margin: 10em 10 30em;
+  max-width: 1000px;
   overscroll-behavior: contain;
 }
 
@@ -33,10 +33,6 @@
   overflow: auto;
   scroll-snap-type: x mandatory;
 }
-.track0 {
-  flex: 1 0 calc(24% + 2px);
-  scroll-snap-align: start;
-}
 
 .scenes::-webkit-scrollbar,
 .scroller::-webkit-scrollbar {
@@ -46,8 +42,12 @@
 .track {
   flex: 1 0 calc(22% + 2px);
   scroll-snap-align: start;
+  
 }
-
+.track0 {
+  flex: 1 0 calc(24% + 2px);
+  scroll-snap-align: start;
+}
 .track + .track {
   margin-left: -1px;
 }
@@ -65,6 +65,11 @@
   z-index: 1;
   background: #efefef;
   font-weight: 700;
+}
+
+.heading1row {
+  width: 1%;
+    white-space: nowrap;
 }
 
 .entry {
@@ -97,10 +102,15 @@
   padding: 1em;
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 1000px) {
   .track {
-    flex: 1 0 calc(50% + 7px);
+    flex: 1 0 calc(70% + 7px);
   }
+  .track0 {
+  flex: 1 0 calc(70% + 7px);
+
+}
 }
   </style>
 <div class="wrap">
