@@ -104,5 +104,6 @@ body {
 @media (max-width: 767px) {
   .track {
     flex: 1 0 calc(100% + 7px);
+    scroll-snap-align: start;
   }
 }
